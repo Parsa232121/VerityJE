@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دانلود مود Verity JE</title>
+    <style>
+        /* ---- تنظیمات کلی و انیمیشن‌ها ---- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Vazir', 'Segoe UI', Tahoma, sans-serif;
+            background: linear-gradient(145deg, #f9e47b 0%, #f5c842 50%, #e6a800 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            direction: rtl;
+        }
+
+        .card {
+            background: rgba(255, 248, 220, 0.25);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 2px solid rgba(255, 215, 0, 0.6);
+            border-radius: 40px;
+            padding: 40px 30px;
+            max-width: 650px;
+            width: 100%;
+            box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            animation: fadeInUp 0.9s ease-out forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .title {
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: #7a5c00;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5), 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+            animation: glowPulse 3s infinite alternate;
+        }
+
+        @keyframes glowPulse {
+            0% { text-shadow: 0 0 20px rgba(255, 215, 0, 0.3), 0 4px 8px rgba(0,0,0,0.1); }
+            100% { text-shadow: 0 0 50px rgba(255, 215, 0, 0.8), 0 4px 8px rgba(0,0,0,0.1); }
+        }
+
+        .subtitle {
+            color: #5a4400;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            border-bottom: 2px dashed rgba(122, 92, 0, 0.3);
+            padding-bottom: 12px;
+        }
+
+        .mod-info {
+            background: rgba(0, 0, 0, 0.15);
+            border-radius: 20px;
+            padding: 18px 15px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(255, 215, 0, 0.4);
+        }
+
+        .mod-info p {
+            color: #3d2e00;
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 2;
+        }
+
+        .mod-info span {
+            background: #7a5c00;
+            color: #fff8d0;
+            padding: 4px 16px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+
+        /* ===== بخش دکمه‌های دانلود (دو ردیفی) ===== */
+        .download-section {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 25px 0 30px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(145deg, #ffd966, #f5b342);
+            color: #3d2e00;
+            font-weight: 900;
+            font-size: 1.2rem;
+            padding: 16px 20px;
+            border-radius: 60px;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px -6px rgba(245, 179, 66, 0.5);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            width: 100%;
+            animation: float 3.5s ease-in-out infinite;
+        }
+
+        /* دکمه نسخه جدید (با رنگ پررنگ‌تر) */
+        .btn-new {
+            background: linear-gradient(145deg, #ffd966, #f5b342);
+            animation-delay: 0s;
+        }
+
+        /* دکمه نسخه ۴.۰.۰ (با رنگ ملایم‌تر و انیمیشن جدا) */
+        .btn-old {
+            background: linear-gradient(145deg, #ffe08a, #f5c842);
+            animation-delay: 0.5s; /* برای اینکه همزمان با دکمه بالا حرکت نکنه */
+            border-color: rgba(255, 215, 0, 0.2);
+        }
+
+        .btn-old:hover {
+            background: linear-gradient(145deg, #ffeaa0, #f5c842);
+        }
+
+        .download-btn:hover {
+            transform: scale(1.03) translateY(-3px);
+            box-shadow: 0 18px 35px -6px rgba(245, 179, 66, 0.7);
+        }
+
+        .download-btn:active {
+            transform: scale(0.95);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* ===== گالری تصاویر ===== */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin: 25px 0 30px;
+        }
+
+        .gallery img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 18px;
+            border: 3px solid rgba(255, 215, 0, 0.6);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.08) rotate(-2deg);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+            border-color: #ffd966;
+        }
+
+        /* ===== لوگوی مستطیلی پایین ===== */
+        .logo-section {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-rect {
+            width: 200px;
+            height: 80px;
+            border-radius: 20px;
+            border: 4px solid #7a5c00;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+            overflow: hidden;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            background: #fff8d0;
+        }
+
+        .logo-rect:hover {
+            transform: scale(1.05) rotate(-2deg);
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.7);
+        }
+
+        .logo-rect img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .footer-note {
+            margin-top: 15px;
+            color: #4d3a00;
+            font-size: 0.85rem;
+            font-weight: 600;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 550px) {
+            .card { padding: 25px 18px; }
+            .title { font-size: 2.2rem; }
+            .gallery img { width: 90px; height: 90px; }
+            .download-btn { font-size: 1rem; padding: 14px 15px; }
+            .logo-rect { width: 150px; height: 65px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+
+        <!-- عنوان -->
+        <h1 class="title">✨ Verity JE</h1>
+        <p class="subtitle">دستیار هوشمند شما در ماین‌کرفت</p>
+
+        <!-- اطلاعات مود -->
+        <div class="mod-info">
+            <p>
+                📦 مود مخصوص <span>Forge 1.20.1</span> <br>
+                🛡️ کاملاً ایمن و بدون ویروس
+            </p>
+        </div>
+
+        <!-- ===== دو دکمه دانلود ===== -->
+        <div class="download-section">
+            <!-- نسخه جدید -->
+            <a href="https://www.curseforge.com/api/v1/mods/1591438/files/8420491/download" 
+               target="_blank" 
+               class="download-btn btn-new">
+                ⬇️ دانلود آخرین نسخه (جدید)
+            </a>
+
+            <!-- نسخه ۴.۰.۰ (کم‌حجم‌تر) -->
+            <a href="https://www.curseforge.com/api/v1/mods/1591438/files/8377968/download" 
+               target="_blank" 
+               class="download-btn btn-old">
+                ⬇️ دانلود نسخه ۴.۰.۰ (کم‌حجم‌تر)
+            </a>
+        </div>
+
+        <!-- گالری تصاویر -->
+        <div class="gallery">
+            <img src="https://media.forgecdn.net/attachments/1781/100/2026-07-08_23-03-51-png.png" alt="اسکرین‌شات وریتی ۱">
+            <img src="https://media.forgecdn.net/attachments/1762/52/2026-06-28_23-50-57-png.png" alt="اسکرین‌شات وریتی ۲">
+            <img src="https://media.forgecdn.net/attachments/1781/99/2026-07-08_23-03-34-png.png" alt="اسکرین‌شات وریتی ۳">
+            <img src="https://media.forgecdn.net/attachments/1762/51/2026-06-28_23-50-32-png.png" alt="اسکرین‌شات وریتی ۴">
+        </div>
+
+        <!-- لوگوی مستطیلی پایین -->
+        <div class="logo-section">
+            <div class="logo-rect">
+                <img src="https://i.ibb.co/1tTdMGBp/minecraft-title.png" alt="لوگو وریتی">
+            </div>
+        </div>
+        <div class="footer-note">
+            🔒 دانلود از منبع رسمی CurseForge
+        </div>
+
+    </div>
+
+</body>
+</html>
