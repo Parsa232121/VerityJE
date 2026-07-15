@@ -1,3 +1,3 @@
 # VerityJE
 Updated Site For Download Verity JE 
-https://Parsa232121.github.io/VerityJE/
+[Click to Open Site](https://parsa232121.github.io/VerityJE/)
